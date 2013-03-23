@@ -1,5 +1,5 @@
 name = MM Theme
-description = Using HTM5 and LESS
+description = Using HTML5 and LESS
 core = 7.x
 engine = phptemplate
 screenshot = screenshot.png
@@ -34,6 +34,7 @@ regions[postscript_fourth] = Postscript Fourth
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
 
+
 ; ZONES
 
 zones[branding] = Branding
@@ -44,6 +45,7 @@ zones[content] = Content
 zones[postscript] = Postscript
 zones[footer] = Footer
 
+
 ; OPTIONAL STYLESHEETS
 
 css[global.css.less][name] = My custom global styles
@@ -51,7 +53,9 @@ css[global.css.less][description] = LESS CSS stylesheet for custom global styles
 css[global.css.less][options][weight] = 10
 settings[alpha_css][global.css.less] = 'global.css.less'
 
+
 ; OPTIONAL LIBRARIES
+
 libraries[retina][name] = Retina
 libraries[retina][description] = To check for and server higher res graphics for retina displays.
 libraries[retina][js][0][file] = retina.js
