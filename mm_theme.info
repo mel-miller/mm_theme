@@ -53,6 +53,9 @@ css[global.css.less][description] = LESS CSS stylesheet for custom global styles
 css[global.css.less][options][weight] = 10
 settings[alpha_css][global.css.less] = 'global.css.less'
 
+css[jquery-ui-1.10.2.custom.css][name] = Custom JQuery UI
+css[jquery-ui-1.10.2.custom.css][options][weight] = 11
+
 
 ; OPTIONAL LIBRARIES
 
