@@ -1,70 +1,248 @@
-/*********************************
-*** variables + mixins
-*********************************/ 
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
 /*** colors ***/
 @black: #000;
 @white: #fff;
-@dk-grey: #666;
-@lt-grey: #ccc;
-@blue: #1bbfe0;
+@grey-1: #ededed;
+@grey-2: #999;
+@grey-3: #333;
+@red: #b00;
+@orange: #ff7526;
+@blue: #0cbde0;
+@green: #c8d732;
+@trans-white: rgba(255,255,255,.65);
+@trans-white-2: rgba(255,255,255,.85);
 
+/*** shadows ***/
+.inner-shadow {
+  -webkit-box-shadow: inset 1px 1px 3px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: inset 1px 1px 3px rgba(50, 50, 50, 0.2);
+  box-shadow: inset 1px 1px 3px rgba(50, 50, 50, 0.2);
+}
 
+/*** text ***/
+.text {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: @black;
+  font-weight: 300;
+}
+.bold-text {
+  .text;
+  font-weight: 600;  
+}
+.bold-cap {
+  .bold-text;
+  text-transform: uppercase;  
+}
+.h {
+  .bold-text;
+  line-height: 125%;
+  margin-bottom: 10px;
+  letter-spacing: .02em;
+}
+.p {
+  .text;
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 5px;
+}
+.a {
+  text-decoration: none;
+  color: @blue;
+}
+.a-hover {
+  text-decoration: none;
+  color: @green;
+}
+.list {  
+  list-style-image: none;
+  list-style: square;
+  list-style-position: outside;
+}
 
+/*** resets ***/
+.reset {
+  margin: 0;
+  padding: 0;
+}
+.no-radius {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.no-border {
+	border: none;
+	outline: none;
+}
+.no-background {
+	background: transparent;
+	background-image: none;
+}
 
+/*********************************
+***  Text Styles
+*********************************/
+body {
+  .p;
+}
+p {
+  .p;
+  margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+  .h;
+}
+h1 {
+  font-size: 36px;
+}
+h2,
+h2.node-title {
+  font-size: 26px;
+}
+h2.block-title {
+  font-size: 24px;
 
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+a, a:link, a:visited {
+  .a;
+}
+a:hover {
+  .a-hover;
+}
 
 
 /*********************************
-*** base elements
-*********************************/ 
+***  buttons
+*********************************/
 
+.node-readmore {
+	display: block;
+	padding: 5px 10px;
 
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.node-readmore a {
+
+}
+
+/*********************************
+***  Structure
+*********************************/
 
 body {
-	font-family: "myriad-pro", sans-serif; 
-	background: url(images/background.png) repeat-x bottom;
-}
-
-a {
-	color: @blue;
-}
-
-
-
-
-
-/*** accordion ***/
-
-#accordion h3 {
-	font-size: 18px;
-}
-
-
-
-/*** zones & wrappers ***/
-
-#zone-branding-wrapper {
-	min-height: 50px;
-	padding-top: 20px;
 	background: @white;
 }
 
+#zone-navbar-wrapper {
+	background: @black;
+	color: @white;
+	padding: 10px 0 6px 0;
+	margin-bottom: 20px;
+}
+h1.site-name-text {
+	margin-top: 6px;
+	font-size: 20px;
+	font-weight: 400;
+}
+.me {
+	color: @grey-2;
+}
+.me:hover {
+	color: @green;
+}
+.pipe {
+	color: @grey-1;
+	margin: 0 6px;
+	font-weight: 300;
+}
+.region-nav-second-inner {
+	float: right;
+}
+.connections-block ul li {
+	list-style-image: none;
+	list-style-type: none;
+	float: left;
+}
+.connections-block ul li a {
+	text-indent: -9999px;
+	display: block;
+	height: 36px;
+	width: 36px;
+}
+.menu-mlid-376 {
+	background: url(../images/drupal-2.png) no-repeat;
+}
+.menu-mlid-376:hover {
+	background: url(../images/drupal.png) no-repeat;
+}
+.menu-mlid-377 {
+	background: url(../images/twitter-2.png) no-repeat;
+}
+.menu-mlid-377:hover {
+	background: url(../images/twitter.png) no-repeat;
+}
+.menu-mlid-378 {
+	background: url(../images/linkedin-2.png) no-repeat;
+}
+.menu-mlid-378:hover {
+	background: url(../images/linkedin.png) no-repeat;
+}
+
+.region-header-first-inner {
+	padding: 20px 0;
+}
+
+#zone-content {
+	min-height: 600px;
+}
+
+.region-sidebar-first-inner {
+	background: @grey-2;
+}
 
 
-/*********************************
-*** Header Section
-*********************************/
-
-
-.site-name,
-.site-name a {
-	font-size: 36px;
-	color: @black;
+.front .node-teaser {
+	border: 1px solid @grey-2;
+	padding: 15px;
 }
 
 
 
 
+.image-box {
+	background: @grey-1;
+	width: 300px;
+	height: 300px;
+	margin-bottom: 20px;
+}
+.image-box-image {
 
-
+}
+.image-box-title {
+	position: relative;
+	top: -300px;
+	padding: 10px 15px;
+	background: @trans-white;
+	font-size: 24px;
+}
+.image-box-title a {
+	color: @black;
+}
+.image-box-title:hover {
+	background: @trans-white-2;
+}
 

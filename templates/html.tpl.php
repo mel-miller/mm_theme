@@ -7,9 +7,9 @@
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
-  <!-- typekit fonts -->
-  <script type="text/javascript" src="//use.typekit.net/gla7vey.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- fonts -->
+  <link href='<?php print (isset($_SERVER['HTTPS']) ? 'https' : 'http') ?>://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,700,300,40' rel='stylesheet' type='text/css'>
+ 
   
 </head>
 <body<?php print $attributes;?>>

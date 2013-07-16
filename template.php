@@ -10,9 +10,3 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
- 
-function mm_theme_preprocess_page(&$variables) {
-	drupal_add_library('system', 'ui');
-	drupal_add_library('system', 'ui.accordion');
-	drupal_add_js('jQuery(document).ready(function(){jQuery("#accordion").accordion({active: false, collapsible: true, autoHeight: false, heightStyle: "content", event: "click"});});', 'inline');
-}
